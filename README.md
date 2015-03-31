@@ -1,4 +1,4 @@
-# Generators
+# Generatable
 Generatable - Intellij IDEA Plugin
 
 Plugin added some actions to Generate menu:
