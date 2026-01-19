@@ -24,6 +24,6 @@ See also:
 3. Install your custom plugin from disk
 
 ```
-IDEA -> Settings -> Plugins -> (gear) -> Install plugin from disk
+IDEA -> Settings -> Plugins -> ⚙️ -> Install plugin from disk
 Navigate to Generatable-1.0-SNAPSHOT.zip
 ```
