@@ -1,0 +1,59 @@
+<idea-plugin>
+    <id>ru.korgov.intellij.Generatable</id>
+    <name>Generatable</name>
+    <version>1.1.2</version>
+    <vendor email="kirill@korgov.ru">Kirill Korgov</vendor>
+
+    <description><![CDATA[
+      Plugin added some actions to Generate menu:
+        <ul>
+          <li>Generate inner Builder class</li>
+          <li>Generate All: getters, equals and hashCode, toString, Constructor, Builder</li>
+        </ul>
+
+      See also:
+        <ul>
+          <li>
+            <a href="https://plugins.jetbrains.com/plugin/7188">FuGen</a> - You can create custom generate-actions by templates on the fly!
+          </li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        1.0.1<br>
+        <ul>
+            <li>Updated inner sdk version for IDEA-14.1</li>
+        </ul>
+        1.0<br>
+        <ul>
+            <li>First version</li>
+        </ul>
+    ]]>
+    </change-notes>
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+    <!--<idea-version since-build="141.177"/>-->
+
+    <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products  -->
+
+    <depends>com.intellij.java</depends>
+    <depends>com.intellij.modules.lang</depends>
+
+    <actions>
+
+        <group id="ru.korgov.intellij.generators.GenerateGroup"
+               class="com.intellij.openapi.actionSystem.DefaultActionGroup">
+            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup2"/>
+            <action id="ru.korgov.intellij.generators.GenerateBuilder" text="Builder"
+                    class="ru.korgov.intellij.generators.builder.actions.GenerateBuilderAction"/>
+            <action id="ru.korgov.intellij.generators.GenerateAll" text="Generate All"
+                    class="ru.korgov.intellij.generators.builder.actions.GenerateAllAction"/>
+        </group>
+    </actions>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+</idea-plugin>

@@ -7,7 +7,7 @@ import com.intellij.codeInsight.generation.actions.BaseGenerateAction;
  * Date: 19/02/15 14:38
  */
 public class GenerateBuilderAction extends BaseGenerateAction {
-  public GenerateBuilderAction() {
-    super(new GenerateBuilderActionHandler());
-  }
+    public GenerateBuilderAction() {
+        super(new GenerateBuilderActionHandler());
+    }
 }
